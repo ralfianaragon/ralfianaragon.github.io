@@ -1,0 +1,69 @@
+<html>
+  <head><!-- Bootstrap Core CSS -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet">
+ <!-- Custom CSS -->
+<link href="../../css/toggle-sidebar.css" rel="stylesheet"></head>
+  <body>
+	<style>
+			button {
+			margin-right:50px;
+			margin-bottom:5px;
+			}
+				
+			#num1 {
+			margin-bottom:5px;
+			}	
+				
+	</style>
+      <script>
+          function toNum(n){
+              return parseInt(n);
+          }
+          function add(n1, n2){
+              sum=toNum(n1) + toNum(n2);
+            output(sum);
+          }
+		  function subtract(n1, n2){
+              diff=toNum(n1) -toNum(n2);
+            output(diff);
+          }
+		  function multiply(n1, n2){
+				prod=toNum(n1) * toNum(n2);
+            output(prod);
+          }
+		  function divide(n1, n2){
+              quot=toNum(n1) / toNum(n2);
+            output(quot);
+          }
+          function output(res){
+              alert(res);
+          }
+      </script>
+     
+	
+	<div class="container">
+		<form name="calc">
+          Num1: <input type="text" id="num1"><br>
+          Num2: <input type="text" id="num2"><br>
+		</form>
+		<div class="row">
+			<div class="col-md-6 portfolio-item">
+				<button onclick="add(document.querySelector('#num1').value, document.querySelector('#num2').value)">Add&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+				<button onclick="subtract(document.querySelector('#num1').value, document.querySelector('#num2').value)">Subtract</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 portfolio-item">
+				<button onclick="multiply(document.querySelector('#num1').value, document.querySelector('#num2').value)">Multiply</button>
+				<button onclick="divide(document.querySelector('#num1').value, document.querySelector('#num2').value)">Divide&nbsp&nbsp&nbsp&nbsp</button>
+			</div>
+		</div>
+	</div>
+	
+    
+  <!-- jQuery -->
+<script src="../../js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="../../js/bootstrap.min.js"></script>
+  </body>
+</html>
